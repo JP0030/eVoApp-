@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    tools:context=".LoginUser"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="339dp"
+        android:layout_height="311dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:translationY="-45dp"
+        android:src="@drawable/background4"/>
+
+
+    <EditText
+        android:id="@+id/edtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:hint="Enter Your User Name"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:inputType="textPersonName"
+        android:imeOptions="actionNext"
+        android:ems="13"
+        android:elevation="5dp"
+        android:background="@drawable/btn2" />
+
+    <EditText
+        android:id="@+id/edtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:hint="Enter Your email id"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:ems="13"
+        android:elevation="5dp"
+        android:layout_marginTop="15dp"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/btn2"/>
+
+
+    <Button
+        android:id="@+id/btnStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Start"
+        android:textAllCaps="true"
+        android:translationY="60dp"
+        android:background="@drawable/btn"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>

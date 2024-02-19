@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center_vertical"
+    android:padding="10dp"
+    tools:context=".LoginOtp"
+    tools:ignore="HardcodedText">
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="339dp"
+        android:layout_height="311dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:translationY="-45dp"
+        android:src="@drawable/background4"/>
+
+    <TextView
+        android:id="@+id/tv_login_issues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="login_issues"
+        android:translationX="280dp"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:id="@+id/tv_hey_there"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hey there,"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp" />
+
+    <EditText
+        android:id="@+id/edtOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:hint="Enter OTP"
+        android:textAlignment="center"
+        android:inputType="number"
+        android:layout_gravity="center"
+        android:imeOptions="actionNext"
+        android:ems="13"
+        android:maxEms="6"
+        android:elevation="5dp"
+        android:background="@drawable/btn2" />
+
+    <Button
+        android:id="@+id/btnContinue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Continue"
+        android:textAllCaps="true"
+        android:translationY="20dp"
+        android:background="@drawable/btn"
+        android:textColor="#FFFFFF" />
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="33dp"
+        android:translationY="27dp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/txtResendOtp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP in 1 minute"
+        android:translationY="35dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

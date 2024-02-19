@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "20679106634",
+    "project_id": "evo-app-backend",
+    "storage_bucket": "evo-app-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:20679106634:android:07c2463bef9a374c3506b3",
+        "android_client_info": {
+          "package_name": "com.jp0030.evoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDATrmbAbliATH5auXi9MjtOFTWiQLGt3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

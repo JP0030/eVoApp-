@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    app:layoutDescription="@xml/activity_welcome_scene"
+    tools:context=".welcome">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="283dp"
+        android:layout_height="290dp"
+        android:src="@drawable/logo4"
+        android:layoutAnimation="@anim/heart_bite" />
+
+    <ImageView
+        android:id="@+id/imgWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/welcome" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGetStart"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_margin="8dp"
+        android:ems="9"
+        android:translationY="120dp"
+        android:text="@string/gs"
+        android:textColor="#387E3F"
+        android:hapticFeedbackEnabled="true"
+        android:background="@drawable/btn"
+        android:textAllCaps="false"
+        android:textSize="30sp" />
+
+</LinearLayout>
