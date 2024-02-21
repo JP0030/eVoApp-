@@ -43,6 +43,4 @@ public class LoginUser extends AppCompatActivity {
             btnStart.setVisibility(View.VISIBLE);
         }
     }
-
-    
 }
