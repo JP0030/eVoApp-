@@ -26,7 +26,7 @@ public class LoginUser extends AppCompatActivity {
 
         phoneNumber = getIntent().getExtras().getString("phone");
         getUserName();
-        
+
     }
 
     void getUserName (){
@@ -43,4 +43,6 @@ public class LoginUser extends AppCompatActivity {
             btnStart.setVisibility(View.VISIBLE);
         }
     }
+
+    
 }
