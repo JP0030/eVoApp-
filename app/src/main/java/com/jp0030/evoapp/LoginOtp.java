@@ -3,19 +3,17 @@ package com.jp0030.evoapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
-import android.telecom.PhoneAccountSuggestion;
+import android.os.CountDownTimer;
+
 import android.view.View;
-import android.view.animation.AnimationUtils;
+
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
@@ -26,8 +24,6 @@ import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.jp0030.evoapp.utils.AndroidUtil;
 
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
 
 public class LoginOtp extends AppCompatActivity {
@@ -40,9 +36,12 @@ public class LoginOtp extends AppCompatActivity {
     String verificationCode;
     PhoneAuthProvider.ForceResendingToken resendingToken;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
+
+    CountDownTimer resendTimer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_login_otp);
 
         edtOtp = findViewById(R.id.edtOtp);
@@ -130,25 +129,23 @@ public class LoginOtp extends AppCompatActivity {
     }
 
 
-    void startResendTimer(){
+    void startResendTimer() {
         txtResendOtp.setEnabled(false);
-        final Handler handler = new Handler();
-        Runnable updateTextTask = new Runnable() {
+        resendTimer = new CountDownTimer(timeOutSeconds * 1000, 1000) {
             @Override
-            public void run() {
-                timeOutSeconds--;
-//                error occurred
-                txtResendOtp.setText("Resend OTP in"+timeOutSeconds +"second");
-                if (timeOutSeconds <= 0){
-                    timeOutSeconds =60L ;
-                    handler.removeCallbacks(this);
-                    txtResendOtp.setEnabled(true);
-                } else {
-                    handler.postDelayed(this, 1000); // Schedule the next update
-                }
+            public void onTick(long millisUntilFinished) {
+                timeOutSeconds = millisUntilFinished / 1000;
+                txtResendOtp.setText("Resend OTP in " + timeOutSeconds + " seconds");
+            }
+
+            @Override
+            public void onFinish() {
+                timeOutSeconds = 60L;
+                txtResendOtp.setEnabled(true);
+                txtResendOtp.setText("Resend OTP");
             }
         };
-        handler.post(updateTextTask);
+        resendTimer.start();
     }
 
 
