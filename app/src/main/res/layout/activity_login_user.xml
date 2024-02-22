@@ -33,18 +33,18 @@
         android:elevation="5dp"
         android:background="@drawable/btn2" />
 
-    <EditText
-        android:id="@+id/edtEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:hint="email id"
-        android:textAlignment="center"
-        android:layout_gravity="center"
-        android:ems="13"
-        android:elevation="5dp"
-        android:layout_marginTop="15dp"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/btn2"/>
+<!--    <EditText-->
+<!--        android:id="@+id/edtEmail"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:hint="email id"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:ems="13"-->
+<!--        android:elevation="5dp"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:background="@drawable/btn2"/>-->
 
 
     <Button

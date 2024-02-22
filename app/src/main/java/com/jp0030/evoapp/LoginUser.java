@@ -18,7 +18,8 @@ import com.jp0030.evoapp.model.UserModel;
 import com.jp0030.evoapp.utils.FirebaseUtil;
 
 public class LoginUser extends AppCompatActivity {
-    EditText edtUserName , edtEmail;
+    EditText edtUserName ;
+//  EditText edtEmail;
     Button btnStart;
     ProgressBar progressBar3;
     String phoneNumber;
@@ -29,19 +30,19 @@ public class LoginUser extends AppCompatActivity {
         setContentView(R.layout.activity_login_user);
 
         edtUserName = findViewById(R.id.edtUserName);
-        edtEmail = findViewById(R.id.edtEmail);
+//        edtEmail = findViewById(R.id.edtEmail);
         btnStart = findViewById(R.id.btnStart);
         progressBar3 = findViewById(R.id.progressBar3);
 
 //        phoneNumber = Objects.requireNonNull(getIntent().getExtras()).getString("phone");
-        phoneNumber = getIntent().getExtras().getString("phone");
+        phoneNumber = getIntent().getExtras().getString("Phone");
         getUsername();
-        getEmail();
+//        getEmail();
 
 
         btnStart.setOnClickListener((v -> {
             setUsername();
-            setEmail();
+//            setEmail();
         }));
 
     }
@@ -89,6 +90,7 @@ public class LoginUser extends AppCompatActivity {
         });
     }
 
+/*
     void getEmail() {
         setInProgress(true);
         FirebaseUtil.currentUserDetails().get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
@@ -130,6 +132,7 @@ public class LoginUser extends AppCompatActivity {
             }
         });
     }
+*/
 
     void setInProgress(boolean inProgress){
         if(inProgress){
