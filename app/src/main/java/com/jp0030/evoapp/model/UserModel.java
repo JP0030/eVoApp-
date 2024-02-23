@@ -8,7 +8,7 @@ public class UserModel {
     private Timestamp createdTimestamp;
     private String userId;
     private String fcmToken;
-//    private String email;
+    private String email;
 
     public UserModel() {
     }
@@ -18,6 +18,7 @@ public class UserModel {
         this.username = username;
         this.createdTimestamp = createdTimestamp;
         this.userId = userId;
+        this.email = email;
     }
 
     public String getPhone() {
@@ -36,7 +37,7 @@ public class UserModel {
         this.username = username;
     }
 
-/*
+
     public String getEmail() {
         return email;
     }
@@ -44,7 +45,7 @@ public class UserModel {
     public void setEmail(String email) {
         this.email = email;
     }
-*/
+
 
     public Timestamp getCreatedTimestamp() {
         return createdTimestamp;
