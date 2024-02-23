@@ -32,7 +32,7 @@
         android:ems="9"
         android:translationY="120dp"
         android:text="@string/gs"
-        android:textColor="#387E3F"
+        android:textColor="#367F3C"
         android:hapticFeedbackEnabled="true"
         android:background="@drawable/btn"
         android:textAllCaps="false"
