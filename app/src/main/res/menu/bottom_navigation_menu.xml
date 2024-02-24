@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/home"
+        android:id="@+id/menuHome"
         android:title="Home"
         android:icon="@drawable/home_1" />
     <item
         android:title="Location"
         android:icon="@drawable/location"
-        android:id="@+id/location"/>
+        android:id="@+id/menuLocation"/>
     <item
         android:title="Qr"
         android:icon="@drawable/qr_code"
-        android:id="@+id/qr"/>
+        android:id="@+id/menuQr"/>
     <item
         android:title="Bike"
         android:icon="@drawable/bike"
-        android:id="@+id/bike"/>
+        android:id="@+id/menuBike"/>
     <item
         android:title="Profile"
         android:icon="@drawable/pro"
-        android:id="@+id/profile"/>
+        android:id="@+id/menuProfile"/>
 
 </menu>
