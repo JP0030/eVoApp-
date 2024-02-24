@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#B3367F3C"
+        android:background="#3FA649"
         android:padding="10dp"
         android:id="@+id/toolBar">
 
@@ -27,6 +27,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/wallet"
+            android:contentDescription="Wallet"
             android:layout_alignParentEnd="true"
             android:background="?attr/selectableItemBackgroundBorderless"
             app:tint="@color/white"
@@ -38,20 +39,21 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/toolBar" />
+        android:layout_below="@+id/toolBar"
+        android:layout_above="@+id/divider" />
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_above="@+id/bottom" />
-    
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="?attr/selectableItemBackgroundBorderless"/>
+        app:menu="@menu/bottom_navigation_menu"/>
 
 
 </RelativeLayout>
